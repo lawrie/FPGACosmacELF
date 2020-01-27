@@ -11,7 +11,7 @@ class TopLevel extends Component {
         val reset_n = in Bool
         val switches = in Bits(12 bit)
         val LEDs = out Bits(8 bits)
-        val segdis = out Bits(12 bits)
+        val segdis = out Bits(10 bits)
 
         val avr_tx = in Bool
         val avr_rx = out Bool
@@ -61,12 +61,12 @@ class TopLevel extends Component {
 
 
         //Setup seven segment display
-        val SevenSegment = SevenSegmentDriver(3, 100 us)
+        val SevenSegment = SevenSegmentDriver(1, 100 us)
         io.segdis := SevenSegment
         when(!(Cpu.io.MRD && Cpu.io.MWR) && Cpu.io.TPB){
             SevenSegment.setDigits(0, Cpu.io.DataOut.asUInt)
         }
-        SevenSegment.setDigits(2, Cpu.io.Addr16(7 downto 0).asUInt)
+        //SevenSegment.setDigits(2, Cpu.io.Addr16(7 downto 0).asUInt)
 
 
         //Setup RX UART
@@ -165,7 +165,7 @@ class TopLevel extends Component {
 
 //Define a custom SpinalHDL configuration with synchronous reset instead of the default asynchronous one. This configuration can be resued everywhere
 object TopSpinalConfig extends SpinalConfig(
-    targetDirectory = "..",
+    //targetDirectory = "..",
     oneFilePerComponent = true,
     defaultConfigForClockDomains = ClockDomainConfig(resetKind = SYNC),
     defaultClockDomainFrequency = FixedFrequency(50 MHz)

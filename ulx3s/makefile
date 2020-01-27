@@ -1,4 +1,4 @@
-VERILOG = ../../TopLevel.v pll.v
+VERILOG = ../TopLevel.v pll.v
 
 FPGA_SIZE ?= 12
 

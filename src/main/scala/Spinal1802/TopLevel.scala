@@ -7,11 +7,11 @@ import spinal.lib.fsm.{EntryPoint, State, StateMachine}
 //Hardware definition
 class TopLevel extends Component {
     val io = new Bundle {
-        val clk50Mhz = in Bool
+        val clkin = in Bool
         val reset_n = in Bool
         val switches = in Bits(12 bit)
         val LEDs = out Bits(8 bits)
-        val segdis = out Bits(11 bits)
+        val segdis = out Bits(12 bits)
 
         val avr_tx = in Bool
         val avr_rx = out Bool
@@ -21,7 +21,7 @@ class TopLevel extends Component {
     val clkCtrl = new Area {
         val pll = new PLL_BB("PLL")
         pll.io.RESET := !io.reset_n
-        pll.io.CLK_IN1 := io.clk50Mhz
+        pll.io.CLK_IN1 := io.clkin
 
         //using 8mhz so that UART running 115200 BAUD
         val clk8Domain = ClockDomain.internal(name = "core8",  frequency = FixedFrequency(8 MHz))

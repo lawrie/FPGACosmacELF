@@ -2,7 +2,7 @@ package Spinal1802
 
 import spinal.core._
 
-class uart_rx6(Name: String) extends BlackBox{
+class uart_rx6(Name: String) extends Component {
     val io = new Bundle {
         val clk = in Bool
         val buffer_reset = in Bool
@@ -15,12 +15,14 @@ class uart_rx6(Name: String) extends BlackBox{
         val buffer_full = out Bool
         val data_out = out Bits(8 bits)
     }
-    noIoPrefix()
-    mapClockDomain(clock=io.clk)
-    setBlackBoxName(Name)
+
+    io.buffer_data_present := False
+    io.buffer_half_full := False
+    io.buffer_full := False
+    io.data_out := 0
 }
 
-class uart_tx6(Name: String) extends BlackBox{
+class uart_tx6(Name: String) extends Component {
     val io = new Bundle {
         val clk = in Bool
         val buffer_reset = in Bool
@@ -33,6 +35,9 @@ class uart_tx6(Name: String) extends BlackBox{
         val buffer_half_full = out Bool
         val buffer_full = out Bool
     }
-    mapClockDomain(clock=io.clk)
-    setBlackBoxName(Name)
+
+    io.serial_out := False
+    io.buffer_data_present := False
+    io.buffer_half_full := False
+    io.buffer_full := False
 }

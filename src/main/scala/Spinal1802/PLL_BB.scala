@@ -9,7 +9,7 @@ class PLL_BB(Name: String) extends BlackBox {
         val RESET       = in Bool
 
         val CLK_OUT1    = out Bool
-        val CLK_OUT2    = out Bool
+        //val CLK_OUT2    = out Bool
         //val CLK_OUT3    = out Bool
         //val CLK_OUT4    = out Bool
         //val CLK_OUT5    = out Bool

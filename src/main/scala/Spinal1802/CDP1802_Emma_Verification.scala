@@ -92,9 +92,9 @@ object cpu1802_Testing_Sim {
       dut.io.Clear_n #= true
 
       val ram = new Memory(4096)
-      ram.loadBin(0x00000, "verification\\test_FPM_Verification.bin")
+      ram.loadBin(0x00000, "verification/test_FPM_Verification.bin")
 
-      val trace = new TraceEmma("verification\\test_FPM_Verification.log")
+      val trace = new TraceEmma("verification/test_FPM_Verification.log")
 
       var c = 0;
       val loop = new Breaks;

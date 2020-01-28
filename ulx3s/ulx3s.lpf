@@ -22,18 +22,19 @@ IOBUF PORT "LEDs[5]" IO_TYPE=LVCMOS33;
 IOBUF PORT "LEDs[6]" IO_TYPE=LVCMOS33;
 IOBUF PORT "LEDs[7]" IO_TYPE=LVCMOS33;
 
-LOCATE COMP "switches[0]" SITE "E8";
-LOCATE COMP "switches[1]" SITE "D8";
-LOCATE COMP "switches[2]" SITE "D7";
-LOCATE COMP "switches[3]" SITE "E7";
-LOCATE COMP "switches[4]" SITE "B11";
-LOCATE COMP "switches[5]" SITE "C11";
-LOCATE COMP "switches[6]" SITE "A10";
-LOCATE COMP "switches[7]" SITE "A11";
-LOCATE COMP "switches[8]" SITE "A9";
-LOCATE COMP "switches[9]" SITE "R1"; # btn[1]
-LOCATE COMP "switches[10]" SITE "B9";
-LOCATE COMP "switches[11]" SITE "C10";
+LOCATE COMP "switches[0]" SITE "B10";
+LOCATE COMP "switches[1]" SITE "A9"; 
+LOCATE COMP "switches[2]" SITE "C10";
+LOCATE COMP "switches[3]" SITE "B9";
+LOCATE COMP "switches[4]" SITE "C11";
+LOCATE COMP "switches[5]" SITE "B11";
+LOCATE COMP "switches[6]" SITE "A11";
+LOCATE COMP "switches[7]" SITE "A10";
+
+LOCATE COMP "switches[8]" SITE "D8";
+LOCATE COMP "switches[9]" SITE "R1";
+LOCATE COMP "switches[10]" SITE "D7";
+LOCATE COMP "switches[11]" SITE "E7";
 
 IOBUF PORT "switches[0]" PULLMODE=DOWN IO_TYPE=LVCMOS33;
 IOBUF PORT "switches[1]" PULLMODE=DOWN IO_TYPE=LVCMOS33;

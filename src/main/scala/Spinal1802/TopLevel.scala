@@ -49,7 +49,7 @@ class TopLevel extends Component {
 
         //Setup switch debounce
         val debounce = Debounce(12, 50 ms)
-        debounce.write(~io.switches)
+        debounce.write(io.switches)
 
 
         //set up Ram
@@ -109,8 +109,7 @@ class TopLevel extends Component {
 
 
         //Output the upper byte of the Address to the LEDs
-        io.LEDs := Cat(UartRx.io.buffer_data_present, buffer_read & !buffer_read_last, Cpu.io.Addr16(13 downto 8))
-
+        io.LEDs := Cat(UartRx.io.buffer_data_present, buffer_read & !buffer_read_last, Cpu.io.Addr16(5 downto 0))
 
         //Switch logic of the Cosmac Elf
 

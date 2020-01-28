@@ -53,7 +53,7 @@ bin/toplevel.bit: bin/toplevel.config
 pll:
 	ecppll \
                 -i 25 \
-                -o 50 \
+                -o 8 \
                 -n  PLL\
                 -f pll.v
 clean:

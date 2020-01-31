@@ -167,7 +167,7 @@ object TopSpinalConfig extends SpinalConfig(
     //targetDirectory = "..",
     oneFilePerComponent = true,
     defaultConfigForClockDomains = ClockDomainConfig(resetKind = SYNC),
-    defaultClockDomainFrequency = FixedFrequency(50 MHz)
+    defaultClockDomainFrequency = FixedFrequency(25 MHz)
 )
 
 //Generate the MyTopLevel's Verilog using the above custom configuration.

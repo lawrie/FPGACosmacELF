@@ -25,7 +25,7 @@ class uart_rx6(Name: String) extends Component {
 
       counter := counter - 1
       when(tick) {
-        counter := (8000000 / 115200 / g.rxSamplePerBit).toInt
+        counter := (ClockDomain.current.frequency.getValue / 115200 / g.rxSamplePerBit).toInt
       }
     }
 
@@ -63,7 +63,7 @@ class uart_tx6(Name: String) extends Component {
 
       counter := counter - 1
       when(tick) {
-        counter := (8000000 / 115200 / g.rxSamplePerBit).toInt
+        counter := (ClockDomain.current.frequency.getValue / 115200 / g.rxSamplePerBit).toInt
       }
     }
 

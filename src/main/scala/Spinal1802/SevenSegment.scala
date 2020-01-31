@@ -66,7 +66,7 @@ class SevenSegmentDriver(val NumberOfDisplays: BigInt = 1, val CycleSpeed: BigIn
     }
 
     when(!displayCounter(0)){
-        displays := B"1" << (displayCounter >> 1)
+        displays := ~(B"1" << (displayCounter >> 1))
         segments := Cat(dp, digit2segments(digit.asUInt))
     } otherwise {
         displays := 0

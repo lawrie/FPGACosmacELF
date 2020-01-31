@@ -22,14 +22,14 @@ IOBUF PORT "LEDs[5]" IO_TYPE=LVCMOS33;
 IOBUF PORT "LEDs[6]" IO_TYPE=LVCMOS33;
 IOBUF PORT "LEDs[7]" IO_TYPE=LVCMOS33;
 
-LOCATE COMP "switches[0]" SITE "B10";
-LOCATE COMP "switches[1]" SITE "A9"; 
-LOCATE COMP "switches[2]" SITE "C10";
-LOCATE COMP "switches[3]" SITE "B9";
-LOCATE COMP "switches[4]" SITE "C11";
-LOCATE COMP "switches[5]" SITE "B11";
-LOCATE COMP "switches[6]" SITE "A11";
-LOCATE COMP "switches[7]" SITE "A10";
+LOCATE COMP "switches[0]" SITE "C11";
+LOCATE COMP "switches[1]" SITE "B11";
+LOCATE COMP "switches[2]" SITE "A11";
+LOCATE COMP "switches[3]" SITE "A10";
+LOCATE COMP "switches[4]" SITE "B10";
+LOCATE COMP "switches[5]" SITE "A9"; 
+LOCATE COMP "switches[6]" SITE "C10";
+LOCATE COMP "switches[7]" SITE "B9";
 
 LOCATE COMP "switches[8]" SITE "D8";
 LOCATE COMP "switches[9]" SITE "R1";
